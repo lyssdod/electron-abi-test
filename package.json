@@ -1,0 +1,31 @@
+{
+  "name": "electron-abi-test",
+  "version": "0.0.0",
+  "description": "Sample electron app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "echo Patching && patch -p0 < electron-builder.patch",
+    "start": "electron app",
+    "postinstall": "install-app-deps"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lyssdod/electron-abi-test.git"
+  },
+  "author": "Alex Revin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cosmosgenius/electron-abi-test/issues"
+  },
+  "homepage": "https://github.com/cosmosgenius/electron-abi-test#readme",
+  "devDependencies": {
+    "electron-builder": "latest",
+    "electron-prebuilt": "1.2.3"
+  },
+  "build": {
+    "appId": "com.cosmosgenius.sampleelectronleveldb",
+    "app-category-type": "public.app-category.developer-tools",
+    "asar": false
+  }
+}

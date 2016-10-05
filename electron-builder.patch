@@ -1,0 +1,18 @@
+--- node_modules/electron-builder/out/util/util.js	2016-08-26 09:22:36.000000000 +0300
++++ node_modules/electron-builder/out/util/util.js	2016-10-06 00:38:03.871513784 +0300
+@@ -35,7 +35,7 @@
+ exports.getGypEnv = getGypEnv;
+ function spawnNpmProduction(command, appDir, env) {
+     let npmExecPath = process.env.npm_execpath || process.env.NPM_CLI_JS;
+-    const npmExecArgs = [command, "--production", "--build-from-source", "--cache-min", "999999999"];
++    const npmExecArgs = [command, "--production", "--cache-min", "999999999"];
+     if (npmExecPath == null) {
+         npmExecPath = process.platform === "win32" ? "npm.cmd" : "npm";
+     } else {
+@@ -257,4 +257,4 @@
+     return (process.env.CI || "").toLowerCase() === "true";
+ }
+ exports.isCi = isCi;
+-//# sourceMappingURL=util.js.map
+\ No newline at end of file
++//# sourceMappingURL=util.js.map
